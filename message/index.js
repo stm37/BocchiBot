@@ -283,7 +283,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
         if (isGroupMsg && isAutoStickerOn && isMedia && isVideo && !isCmd) {
             const mediaData = await decryptMedia(message, uaOverride)
             const videoBase64 = `data:${mimetype};base64,${mediaData.toString('base64')}`
-            await bocchi.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, pack: 'BocchiBot', author: '@SlavyanDesu', fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
+            await bocchi.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, pack: 'junnBot', author: '@junaediindra', fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
             console.log(`Sticker processed for ${processTime(t, moment())} seconds`)
         }
 
@@ -356,7 +356,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
 
         switch (command) {
             case 'antiporn': // Premium, chat VideFikri
-                await bocchi.reply(from, 'Premium Feature!\n\nContact: wa.me/6285692655520?text=Buy%20Anti%20Porn', id)
+                await bocchi.reply(from, 'Premium Feature!\n\nContact: wa.me/62895605030379?text=Buy%20Anti%20Porn', id)
             break
 
             // Register by Slavyan
@@ -3943,7 +3943,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
                         txt += '╠➥'
                         txt += ` @${groupAdm[i].replace(/@c.us/g, '')}\n`
                     }
-                    txt += '╚═〘 *B O C C H I  B O T* 〙'
+                    txt += '╚═〘 *J U N N  B O T* 〙'
                     await bocchi.sendTextWithMentions(from, txt)
                 } else {
                     let txt = '╔══✪〘 *ADMINS* 〙✪══\n'
@@ -3951,7 +3951,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
                         txt += '╠➥'
                         txt += ` @${groupAdm[i].replace(/@c.us/g, '')}\n`
                     }
-                    txt += '╚═〘 *B O C C H I  B O T* 〙'
+                    txt += '╚═〘 *J U N N  B O T* 〙'
                     await bocchi.sendTextWithMentions(from, txt)
                     daily.addLimit(sender.id, _daily)
                 }
@@ -3973,7 +3973,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
                             txt += '╠➥'
                             txt += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
                         }
-                    txt += '╚═〘 *B O C C H I  B O T* 〙'
+                    txt += '╚═〘 *J U N N  B O T* 〙'
                     await bocchi.sendTextWithMentions(from, txt)
                 } else {
                     let txt = '╔══✪〘 Mention All 〙✪══\n'
@@ -3981,7 +3981,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
                             txt += '╠➥'
                             txt += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
                         }
-                    txt += '╚═〘 *B O C C H I  B O T* 〙'
+                    txt += '╚═〘 *J U N N  B O T* 〙'
                     await bocchi.sendTextWithMentions(from, txt)
                     daily.addLimit(sender.id, _daily)
                 }
@@ -4154,7 +4154,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
                 const chats = await bocchi.getAllChatIds()
                 for (let bcs of chats) {
                     let cvk = await bocchi.getChatById(bcs)
-                    if (!cvk.isReadOnly) await bocchi.sendText(bcs, `${q}\n\n- Slavyan (Kal)\n_Broadcasted message_`)
+                    if (!cvk.isReadOnly) await bocchi.sendText(bcs, `${q}\n\n- junnbot (Kal)\n_Broadcasted message_`)
                 }
                 await bocchi.reply(from, ind.doneOwner(), id)
             break
